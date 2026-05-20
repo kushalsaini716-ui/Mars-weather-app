@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.allcontent {
+  display: flex;
+
+}
+
+.header-nox {
+  display: flex;
+  background: black;
+  border: 2px solid white;
+  font-size: 22px;
+  padding: 29px;
+  font-family: cursive;
+}
+
+.allcity {
+  background-color: darksalmon;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.active-city {
+  border-left: 6px solid orange !important;
+  background: #1f1f1f !important;
+  color: orange !important;
+}
+
+.city {
+  width: 239px;
+  height: 100px;
+  font-size: 20px;
+  color: white;
+  background: black;
+  align-content: center;
+  border: 2px solid white;
+}
+
+.city:hover {
+  background: #222;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.display-menu {
+  background: rgb(14, 13, 13);
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+.city-card {
+  margin: 20px;
+  padding: 30px;
+
+}
+
+.citycontent {
+  display: flex;
+  /* border: 2px solid white; */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.city-name {
+  font-size: 52px;
+  font-family: system-ui;
+  font-weight: 700;
+}
+
+.dust-temp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+}
+
+.city-temp {
+  font-size: 83px;
+  font-family: cursive;
+
+}
+
+.city-dust {
+  margin: 10px;
+  align-items: center;
+  font-size: 23px;
+}
+
+.city-advisory {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+}
+
+.city-advisory span {
+  font-size: 22px;
+}
+
+.add-city {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: #7361613d;
+  border-radius: 14px;
+  padding: 30px;
+  align-self: center;
+
+}
+
+.add-city input {
+  height: 25px;
+  color: white;
+  align-items: center;
+  align-content: center;
+  background: black;
+  width: 50%;
+  border-radius: 7px;
+  margin: 10px;
+  align-self: center;
+}
+
+.submit-btn {
+  width: 30%;
+  background: #993838;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 24px;
+  align-self: center;
+}
+
+.add-city-btn {
+  height: 100px;
+  background: black;
+  font-size: 30px;
+}
