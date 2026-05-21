@@ -9,6 +9,8 @@ function App() {
   const [display, setDisplay] = useState(0)
   const [showForm, setShowForm] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+
 
   const [newCity, setNewCity] = useState("")
   const [newRegion, setNewRegion] = useState("")
@@ -24,44 +26,60 @@ function App() {
 
         <div className="select-menu">
 
-          <div className="header-nox" style={{
-            color: allCities[display].theme
-          }} >
-            <span>Mars Cities  </span>
-    
-          </div>
 
 
-          <div className="allcity">
-            <button
-              className="add-city-btn"
-              onClick={() => setShowForm(!showForm)}
-            >
-              <span> Add City</span> <span><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="white"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg></span>
-            </button>
-
-            {allCities.map((s, i) => (
-
-              <span
-                key={i}
-                className={`city ${display === i ? "active-city" : ""}`}
-                onClick={() => {
-                  setDisplay(i)
-                }}
+          {menuOpen && (
+            <div className="allcity">
+              <button
+                className="add-city-btn"
+                onClick={() => setShowForm(!showForm)}
               >
-                {s.name}
-              </span>
-
-            ))}
+                <span> Add City</span> <span><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="white"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg></span>
+              </button>
 
 
+              {allCities.map((s, i) => (
+
+                <span
+                  key={i}
+                  className={`city ${display === i ? "active-city" : ""}`}
+                  onClick={() => {
+                    setDisplay(i)
+                  }}
+                >
+                  {s.name}
+                </span>
+
+              ))}
 
 
-          </div>
+
+
+            </div>
+          )}
 
         </div>
 
         <div className="display-menu">
+          
+          <div className="header-nox" >
+            <span className="menu-btn" style={{
+            color: allCities[display].theme
+          }} 
+              onClick={() => setMenuOpen(!menuOpen)}>Mars Cities
+            </span>
+            <span style={{
+            color: allCities[display].theme
+          }} 
+          onClick={() => setDisplay(0)}>Home</span>
+            <span style={{
+            color: allCities[display].theme
+          }}
+          onClick={() => setSearchOpen(!searchOpen)}
+          >search Cities</span> 
+          {searchOpen &&(<span><input type="search" placeholder='city' className='search-input'/></span>)}
+
+          </div>
 
           {/* <h1>{selectedCity}</h1> */}
 

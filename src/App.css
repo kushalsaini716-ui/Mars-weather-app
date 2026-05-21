@@ -9,6 +9,19 @@
 
 }
 
+.header-nox span {
+  text-decoration: underline;
+  margin-left: 20px;
+
+}
+
+.header-nox span:hover {
+  color: white !important;
+  cursor: pointer;
+
+
+}
+
 .header-nox {
   display: flex;
   background: black;
@@ -16,6 +29,15 @@
   font-size: 22px;
   padding: 29px;
   font-family: cursive;
+}
+
+.search-input {
+  height: 33px;
+  background: black;
+  border-radius: 10px;
+  width: 200px;
+  color: white;
+  font-size: 17px;
 }
 
 .allcity {
